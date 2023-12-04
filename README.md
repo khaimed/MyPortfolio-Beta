@@ -15,13 +15,13 @@ This project is a simple static website that displays music lyrics. It is design
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/khaimed/My-Portfolio-beta.git
+    git clone https://github.com/khaimed/MyPortfolio-beta.git
     ```
 
 2. **Navigate to the Project Directory:**
 
     ```bash
-    cd My-Portfolio-Beta
+    cd MyPortfolio-Beta
     ```
 
 3. **Open `index.html` in a Browser:**
