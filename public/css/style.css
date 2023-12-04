@@ -1,0 +1,452 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:500,700,900&display=swap');
+
+/* General Style */
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+ }
+body{
+   margin: 0;
+   line-height: 1.5;
+   font-size:16px;
+   font-family: 'Montserrat',sans-serif;
+   font-weight: 400;
+}
+::before,::after{
+   box-sizing: border-box;
+}
+input,textarea,select{
+   font-family: 'Montserrat',sans-serif;
+}
+
+/* home */
+
+.home .intro {
+    color: #302e4d;
+    text-align: center;
+}
+
+.home .intro .intro-image{
+    background-image: url("../images/profile.png");
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+}
+.home .intro span{
+    font-weight: 600;
+}
+.home .intro .intro-text{
+    font-size: 12px;
+    font-weight: 500;
+    max-width: 300px;
+    margin: 0 auto 8px;
+}
+.home .intro .intro-text span{
+    color: #1888c8;
+}
+
+/* List Desktop */
+
+.list-desktop .fraction {
+    position: absolute;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.list-desktop .fraction#about{
+    top: 0;
+    left: 0;
+}
+.list-desktop .fraction#blog{
+    top: 0;
+    right: 0;
+}
+.list-desktop .fraction#portfolio{
+    bottom: 0;
+    left: 0;
+}
+.list-desktop .fraction#contact{
+    bottom: 0;
+    right: 0;
+}
+
+.list-desktop .fraction#portfolio > .header,.list-desktop .fraction#contact > .header{
+    bottom: 0;
+}
+
+.list-desktop .fraction .header{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-color: #093047;
+}
+
+.list-desktop .fraction .header div {
+    display: none;
+    color: #f7f7f7;
+    text-decoration:none;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 3vh;
+}
+
+.list-desktop .fraction:hover .header div,
+.list-desktop .fraction.open .header div {
+    display: inline-flex;
+}
+/* .list-desktop .fraction#blog .header,
+.list-desktop .fraction#contact .header {
+    text-align: end;
+} */
+
+.list-desktop .fraction.open{
+    width: 100%;
+    height: 100%;
+}
+
+.list-desktop .fraction:hover .bg-tenor,
+.list-desktop .fraction.open .bg-tenor {
+    background-color: #1888c8;
+    opacity: .1;
+}
+
+.list-desktop .fraction.open .bg-tenor {
+    opacity: 1;
+}
+
+.list-desktop .fraction .bg-tenor .tenor {
+    width: 0;
+    height: 0;
+    transition: all .4s ease;
+}
+
+.list-desktop .fraction#blog .bg-tenor,
+.list-desktop .fraction#about .bg-tenor {
+    padding-top: 30px;
+}
+
+.list-desktop .fraction#portfolio .bg-tenor,
+.list-desktop .fraction#contact .bg-tenor {
+    padding-bottom: 30px;
+}
+
+.list-desktop .fraction#contact .bg-tenor {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.list-desktop .fraction.open .bg-tenor .tenor {
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+    opacity: 1;
+    transition: all .4s ease;
+}
+
+.fraction .header div span {
+    -webkit-animation: loop .5s cubic-bezier(1, 0, 0, 1) infinite;
+    animation: loop .5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@-webkit-keyframes loop{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes loop{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Menu Mobile */
+
+.tactile .menu-mobile{
+    position: absolute;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: #1888c8;
+    right: 0;
+    top: 0;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tactile .menu-mobile.open{
+    background-color: #093047;
+}
+.tactile .menu-mobile span{
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #f2f2fc;
+    margin: auto;
+    transition: all .2s ease-in-out;
+}
+.tactile .menu-mobile span:before{
+    position: absolute;
+    content: '';
+    top: 10px;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #f2f2fc;
+    transition: all .4s ease-in-out; 
+}
+.tactile .menu-mobile span:after{
+    position: absolute;
+    content: '';
+    bottom: 10px;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #f2f2fc;
+    transition: all .4s ease-in-out; 
+}
+.tactile .menu-mobile.open span{
+    background-color: transparent;
+    transition: background-color .4s ease-in-out; 
+}
+.tactile .menu-mobile.open span:before{
+    position: absolute;
+    content: '';
+    top: 18px;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #f2f2fc;
+    align-self: flex-end;
+    transform: rotate(-45deg);
+}
+.tactile .menu-mobile.open span:after{
+    position: absolute;
+    content: '';
+    bottom: 18px;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #f2f2fc;
+    align-self: flex-start;
+    transform: rotate(45deg);
+}
+
+/* List Mobile */
+
+.tactile .home .intro .intro-text:nth-child(5){
+    display: none;
+}
+
+.list-mobile {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #093047;
+}
+.list-mobile.open {
+    display: block;
+}
+
+.list-mobile .fraction {
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.list-mobile .fraction#about{
+    top: 30%;
+}
+.list-mobile .fraction#blog{
+    top: 40%;
+}
+.list-mobile .fraction#portfolio{
+    top: 50%;
+}
+.list-mobile .fraction#contact{
+    top: 60%;
+}
+
+/* .list-mobile .fraction .header{
+    background-color: #093047;
+} */
+
+.list-mobile .fraction .header div {
+    color: #f7f7f7;
+    font-size: 4vh;
+    text-align: center;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.list-mobile .fraction.open{
+    top: 0!important;
+}
+.list-mobile .fraction.open .header div {
+    text-align: left;
+}
+.list-mobile .fraction.open .bg-tenor,
+.list-mobile .fraction.open .bg-tenor .tenor{
+    width:100%;
+    height: 0;
+}
+.list-mobile .fraction.open .bg-tenor{
+    height: 94vh;
+    background-color: #1888c8;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.list-mobile .fraction.open .bg-tenor .tenor{
+    height:100%;
+    background-color: #f2f2fc;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+/* Loading */
+
+.preloader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preloader_hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out ;
+}
+.preloader .loading{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0.5;
+}
+.loading .first_element{
+    position: absolute;
+    width: 40px;
+    height: 200px;
+    border-start-start-radius: 40px;
+    border-end-end-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animation_three 1.5s ease-in-out;
+}
+.loading .first_element:after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 75px;
+    top: 25px;
+    background-color: #f7f7f7;
+    border-start-start-radius: 40px;
+}
+.loading .first_element:before{
+    content: "";
+    border-start-start-radius: 40px;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    border: 4px solid #f7f7f7;
+    position: absolute;
+    background-color: #1888c8;
+}
+.loading .second_element{
+    position: absolute;
+    width: 40px;
+    height: 200px;
+    background-color: #1888c8;
+    border: 4px solid #f7f7f7;
+    border-start-start-radius: 40px;
+    border-end-end-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(495deg);
+    animation: animation_two 1.5s ease-in-out;
+}
+.loading .second_element:after{
+    content: "";
+    width: 10px;
+    height: 150px;
+    background-color: #f7f7f7;
+    border-start-start-radius: 40px;
+    border-end-end-radius: 40px;
+}
+.loading .third_element{
+    position: absolute;
+    width: 40px;
+    height: 200px;
+    background-color: #1888c8;
+    border: 4px solid #f7f7f7;
+    border-start-start-radius: 40px;
+    border-end-end-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(405deg);
+    animation: animation_one 1.5s ease-in-out;
+}
+.loading .third_element::after{
+    content: "";
+    width: 10px;
+    height: 150px;
+    background-color: #f7f7f7;
+    border-start-start-radius: 40px;
+    border-end-end-radius: 40px;
+}
+.loading .circle {
+    border-radius: 50%;
+    background-color: #1888c8;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    opacity: 0;
+    animation: scaleIn 3s infinite cubic-bezier(.36, .11, .89, .32);
+}
+@keyframes scaleIn {
+    from {
+        transform: scale(0, 0);
+        opacity: .5;
+    }
+    to {
+        transform: scale(2.5, 2.5);
+        opacity: 0;
+    }
+}
+@keyframes animation_one {
+    0%{transform: rotate(0) translate(0,-40px); opacity: 0;}
+    10%{transform: translate(0,0); opacity: 1;}
+    39%{transform: rotate(0)}
+    50%{transform: rotate(405deg);}
+    100%{transform: rotate(405deg);}
+}
+@keyframes animation_two {
+    0%{transform: rotate(0);opacity: 0;}
+    19%{opacity: 0;}
+    20%{opacity: 1;}
+    39%{transform: rotate(0);}
+    50%{transform: rotate(495deg);}
+    100%{transform: rotate(495deg);}
+}
+@keyframes animation_three {
+    0%{transform: rotate(0);opacity: 0;}
+    19%{opacity: 0;}
+    20%{opacity: 1;}
+    39%{transform: rotate(0);}
+    50%{transform: rotate(360deg);}
+    100%{transform: rotate(360deg);}
+}
