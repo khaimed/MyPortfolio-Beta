@@ -15,7 +15,7 @@ This project is a simple static website that displays music lyrics. It is design
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/khaimed/MyPortfolio-beta.git
+    git clone https://github.com/khaimed/MyPortfolio-Beta.git
     ```
 
 2. **Navigate to the Project Directory:**
