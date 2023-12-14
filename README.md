@@ -1,4 +1,4 @@
-# My Static Portfolio Beta
+Io# My Static Portfolio Beta
 
 ## Overview
 
@@ -47,4 +47,6 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 For any questions or suggestions, feel free to contact the project maintainer:
 
 - **Khaimed**
+_ Facebook.com/khaimedev
+- Instagram.com/khaimedev
 - **Email:** khalid.aitmhamed@hotmail.com
