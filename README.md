@@ -1,4 +1,4 @@
-# My Static Portfolio Beta
+# My Static Portfolio
 
 ## Overview
 
